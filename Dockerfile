@@ -32,7 +32,7 @@ RUN apk add --no-cache alpine-sdk linux-headers \
 
 # Next line is important because it is parsed by the Makefile...
 ARG PYTHON_VERSION=2.7
-COPY LICENSE config_distro.py /usr/local/lib/python2.7/site-packages/pgadmin4/
+COPY LICENSE config.py config_distro.py /usr/local/lib/python2.7/site-packages/pgadmin4/
 
 USER pgadmin:pgadmin
 CMD ["python", "./usr/local/lib/python2.7/site-packages/pgadmin4/pgAdmin4.py"]
